@@ -1,0 +1,9 @@
+{
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.workingDirectories": [
+    "./frontend"
+  ],
+  "typescript.preferences.importModuleSpecifier": "relative"
+}

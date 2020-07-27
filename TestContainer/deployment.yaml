@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <username>-<image>-deployment
+  labels:
+    app: <image>
+    user: <username>
+  namespace: <username>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <image>
+      user: <username>
+  template:
+    metadata:
+      labels:
+        app: <image>
+        user: <username>
+    spec:
+      containers:
+      - name: <username>-<image>
+        image: <image>:<tag>
+        ports:
+        - containerPort: 22
